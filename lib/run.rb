@@ -7,6 +7,7 @@ require_relative "user"
 require_relative "track"
 require_relative "menu"
 require_relative "moods_repo"
+require_relative "quotes"
 
 username = User.welcome_user
 user = User.new(username)

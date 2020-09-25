@@ -9,7 +9,7 @@ class User
   
   private #this means no one else can access 
   def self.welcome_user
-      puts "Welcome to the Good Luck Generator "
+      puts "Welcome to the Mood Booster!"
       puts "Please enter your name!"
       print "> "
       username = gets.chomp
