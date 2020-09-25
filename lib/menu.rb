@@ -16,16 +16,27 @@ class Menu
     end
   end
 
+  # def terminal_table
+  #   rows = @mood_repo.user_moods.map do |mood|
+  #     mood.to_a 
+  #   end
+  #   table = Terminal::Table.new({ headings: HEADINGS, rows: rows })
+  #   puts table
+  # end
+
   # I can't seem to get @track.todays_mood to connect (case 1 ), also cant print mood options
   def router
+    moods = read_moods
     loop do
       case menu_selection
       when '1'
-        @track.todays_mood(@user)
+       tracker = @track.todays_mood(@user)
+       moods << tracker 
       when '2'
-        # View moods
+        puts "Your moods for the week are: "
+        p moods 
       when '3'
-        # Goodluck
+        # Goodluck Quote = only if time => will use a simple if/else for this 
       when '4'
         exit 
       end

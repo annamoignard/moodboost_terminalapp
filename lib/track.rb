@@ -1,17 +1,15 @@
+require "byebug"
 require_relative "mood_tracker_helper"
 
-# why wont this connect OMG :( :( PLEASE WORK
 class Track
+  attr_reader :mood 
   include MoodTracker
-  def todays_mood(user)
-    choices = %w(happy excited sleepy nonchlant sad)
-    PROMPT.multi_select("Tell me how you're feeling today #{user.username}?", choices)
+  def todays_mood(user) # maybe I should repeat this and do one for days of week?
+    choices = {happy: "happy", excited: "excited", sleepy: "sleepy", nonchlant: "nonchlant", sad: "sad"}
+    mood = PROMPT.select("Tell me how you're feeling today #{user.username}?", choices)
+    days = {monday: "monday",  tuesday: "tuesday", wednesday: "wednesday", thursday: "thursday"}
+    day = PROMPT.select("What day is it? #{user.username}?", days)
+    {"day" => day, "mood" => mood}
   end
 end
 
-# My run file wont work - fixed
-# user name doesnt work on this page
-# How can I get my username to be inserted in line 9? currently, it is undefined variable,
-# but actually it's a user input gets.chomp from the user page.
-# When user selects 1 it should come to this page and run TRACK however it doesnt!
-# what is that scary message on my terminal! :O
