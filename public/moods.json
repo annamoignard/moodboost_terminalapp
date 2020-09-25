@@ -1,0 +1,16 @@
+[
+  
+    {
+      "day": "Monday",
+      "mood": "Happy" 
+    }, 
+    {
+      "day": "Tuesday", 
+      "mood": "Sad"
+    }, 
+    {
+      "day": "Wednesday", 
+      "mood": "Nonchlant"
+    }
+  
+]

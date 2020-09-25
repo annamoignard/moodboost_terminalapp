@@ -37,7 +37,7 @@ class Menu
         puts "Your moods for the week are: "
         p moods 
       when '3'
-        @quotes.quotes_generator
+        @quotes.good_vibes
       when '4'
         exit 
       end
