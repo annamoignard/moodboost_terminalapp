@@ -1,6 +1,6 @@
 # welcome to the mood tracker => get user's name 
 class User
-  attr_accessor :username
+  attr_reader :username
 
   def initialize(username)
     @username = username #should this be gets.chomp as well?
@@ -9,13 +9,14 @@ class User
   
   private #this means no one else can access 
   def self.welcome_user
-      puts "Welcome to The Good Luck Generator!"
+      puts "Welcome to the Good Luck Generator "
       puts "Please enter your name!"
       print "> "
       username = gets.chomp
-      puts "Thank you #{username}, it's lovely to have you here!"
+      puts "Thanks #{username}! It's lovely to have you here!"
+      puts "Let's get started!"
+      username 
   end
-  welcome_user
 end 
 
 
