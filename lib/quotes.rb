@@ -4,7 +4,6 @@ class Quotes
   include MoodTracker
 
 def quotes_generator
-  puts "hey, you're looking fabulous!"
     return PROMPT.select("Let's boost your vibes! Please make a selection!") do |vibe|
       vibe.choice({ name: "Confidence Boost", value: 'Skill and confidence are an unconquered army.- George Herbert' })
       vibe.choice({ name: "Zen Boost", value: 'Wherever you are, it’s the place you need to be - Maxime Lagacé' })
