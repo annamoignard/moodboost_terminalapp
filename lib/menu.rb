@@ -4,9 +4,9 @@ require_relative "mood_tracker_helper"
 class Menu 
   include MoodTracker #this allows us to use all methods, even non self methods from the module
   def initialize(user)
-    @track = Track.new
     @user = user 
     @quotes = Quotes.new
+    @moods = read_moods 
   end 
 
   def menu_selection 
@@ -18,24 +18,23 @@ class Menu
     end
   end
 
-  # def terminal_table
-  #   rows = @mood_repo.user_moods.map do |mood|
-  #     mood.to_a 
-  #   end
-  #   table = Terminal::Table.new({ headings: HEADINGS, rows: rows })
-  #   puts table
-  # end
+  def terminal_table
+    rows = @moods.map do |mood|
+      mood.to_arr
+    end
+    table = Terminal::Table.new({headings: HEADINGS, rows: rows })
+    puts table
+  end
   
   def router
-    moods = read_moods
     loop do
       case menu_selection
       when '1'
-        tracker = @track.todays_mood(@user)
-        moods << tracker 
+        tracker = Track.todays_mood(@user)
+        @moods << tracker 
       when '2'
         puts "Your moods for the week are: "
-        p moods 
+        terminal_table
       when '3'
         @quotes.good_vibes
       when '4'

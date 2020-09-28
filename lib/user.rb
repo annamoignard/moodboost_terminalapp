@@ -3,8 +3,7 @@ class User
   attr_reader :username
 
   def initialize(username)
-    @username = username #should this be gets.chomp as well?
-    # self.welcome_user
+    @username = username 
   end
   
   private #this means no one else can access 

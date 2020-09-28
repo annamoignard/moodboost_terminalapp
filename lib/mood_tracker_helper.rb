@@ -1,5 +1,5 @@
 module MoodTracker
-  INPUTS = %i[day mood description].freeze
-  HEADINGS = %i[id day mood description].freeze
+  INPUTS = %i[day mood].freeze
+  HEADINGS = %i[day mood].freeze
   PROMPT = TTY::Prompt.new(active_color: :cyan)
 end   

@@ -6,10 +6,10 @@ class Quotes
 def quotes_generator
   puts "hey, you're looking fabulous!"
     return PROMPT.select("Let's boost your vibes! Please make a selection!") do |vibe|
-      vibe.choice({ name: "Confidence Boost", value: 'A confident quote' })
-      vibe.choice({ name: "Zen Boost", value: 'A peaceful quote' })
-      vibe.choice({ name: "Energy Boost", value: 'An energetic quote' })
-      vibe.choice({ name: "Mood Boost", value: 'A loving quote' })
+      vibe.choice({ name: "Confidence Boost", value: 'Skill and confidence are an unconquered army.- George Herbert' })
+      vibe.choice({ name: "Zen Boost", value: 'Wherever you are, it’s the place you need to be - Maxime Lagacé' })
+      vibe.choice({ name: "Energy Boost", value: 'The future depends on what you do today. - Gandhi' })
+      vibe.choice({ name: "Mood Boost", value: 'Happiness is when what you think, what you say, and what you do are in harmony. - Gandhi' })
     end 
 end 
 
