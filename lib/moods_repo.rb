@@ -5,7 +5,7 @@ require "json"
 # end
 
 def read_moods
-  raw_data = File.read("../public/moods.json")
+  raw_data = File.read("#{Dir.home}/desktop/terminalapp/public/moods.json") 
   mood_data = JSON.parse(raw_data) 
   Track.create(mood_data)
 end 
@@ -16,5 +16,5 @@ end
 
 def write_moods
   # raw_data = @moods.map do |mood|
-  File.write("../public/moods.json", JSON.pretty_generate(@user_moods))
+  File.write("#{Dir.home}/desktop/terminalapp/public/moods.json", JSON.pretty_generate(@user_moods))
 end 

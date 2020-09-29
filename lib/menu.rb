@@ -38,6 +38,7 @@ class Menu
       when '3'
         @quotes.good_vibes
       when '4'
+        puts "Bye-bye! Have a great day!"
         exit 
       end
     end
