@@ -4,7 +4,7 @@
 
 2. Then, you will also need to install [git](https://git-scm.com/downloads)
 
-3. After this, please `git clone` the app to your **desktop** directory (it's important that you clone to your DESKTOP direcotry)
+3. After this, please `git clone` the app to your **desktop** directory (it's important that you clone to your DESKTOP directory)
 
 ```bash
 git clone https://github.com/annamoignard/terminalapp ~/desktop/terminalapp
@@ -31,6 +31,8 @@ export PATH=$PATH:$HOME/desktop/terminalapp/bin
 ```bash
 moodbooster
 ``` 
+
+9. This app looks the best with a black terminal, however it isn't 100% needed! Please enjoy!
 
 # Project Management 
 

@@ -33,7 +33,7 @@ class Menu
         tracker = Track.todays_mood(@user)
         @moods << tracker 
       when '2'
-        puts "Your moods for the week are: ".colorize(:magenta)
+        puts "Your moods for the week are: ".colorize(:blue)
         terminal_table
       when '3'
         @quotes.good_vibes
