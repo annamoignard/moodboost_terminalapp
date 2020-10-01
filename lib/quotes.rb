@@ -14,12 +14,12 @@ end
 
 def good_vibes
   loop do
-      vibe_menu_selection = PROMPT.select("What would you like to do?".colorize(:magenta)) do |vibe_menu|
-      vibe_menu.choice({ name: "Tell me a quote" , value: '1' })
-      vibe_menu.choice({ name: "Go back" , value: '2' })        
+    vibe_menu_selection = PROMPT.select("What would you like to do?".colorize(:magenta)) do |vibe_menu|
+    vibe_menu.choice({ name: "Tell me a quote" , value: '1' })
+    vibe_menu.choice({ name: "Go back" , value: '2' })        
     end 
 
-    case vibe_menu_selection
+  case vibe_menu_selection
     when '1'
       puts quotes_generator
     when '2'

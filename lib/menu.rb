@@ -6,7 +6,7 @@ class Menu
   def initialize(user)
     @user = user 
     @quotes = Quotes.new
-    @moods = read_moods 
+    @moods = read_moods  
   end 
 
   def menu_selection 
@@ -38,12 +38,14 @@ class Menu
       when '3'
         @quotes.good_vibes
       when '4'
-        puts "Bye-bye! Have a great day!".colorize(:cyan)
+        puts "Bye-bye! Have a great day #{@user.username}!".colorize(:cyan)
         write_moods(@moods)
         exit 
       end
-    end
   end
+end 
 end
+
+
 
 
