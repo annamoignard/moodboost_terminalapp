@@ -39,6 +39,7 @@ class Menu
         @quotes.good_vibes
       when '4'
         puts "Bye-bye! Have a great day!".colorize(:cyan)
+        write_moods(@moods)
         exit 
       end
     end

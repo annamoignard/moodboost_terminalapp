@@ -7,6 +7,7 @@ class Track
     @day = day
     @mood = mood
   end 
+  
   def self.todays_mood(user) 
     days = {Monday: "Monday",  Tuesday: "Tuesday", Wednesday: "Wednesday", Thursday: "Thursday", Friday: "Friday", Saturday: "Saturday", Sunday: "Sunday"}
     day = PROMPT.select("What day would you like to track?".colorize(:blue), days)
@@ -19,9 +20,20 @@ class Track
     return [@day, @mood]
   end 
 
-  def self.create(moods_array)
+  def to_h
+    {
+      day: @day, 
+      mood: @mood
+    }
+  end 
+
+  def self.convert(moods_array, type)
     moods_array.map do |mood|
-      Track.new(mood["day"], mood["mood"]) #creates an array for Track objects 
+      if type == :object 
+        Track.new(mood["day"], mood["mood"]) #creates an array for Track objects 
+      elsif type == :hash 
+        mood.to_h
+      end 
     end 
   end 
 end

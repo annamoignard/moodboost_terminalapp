@@ -23,14 +23,15 @@ else
   menu = Menu.new(user)
 end 
 
-
-def help_docs 
+# Details for the user regarding the use of ARGV are in the readme.md file
+def user_help 
+  puts ""
   puts "-l and --list"
-  puts "shortcut to get to this week's moods"
+  puts "Write either 'moodbooster -l' or 'moodbooster --l' in the command line to view your week's moods"
 end
 
 if option == "-h"
-  help_docs
+  user_help
   exit
 end
 
