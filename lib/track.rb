@@ -6,35 +6,34 @@ class Track
   def initialize(day, mood)
     @day = day
     @mood = mood
-  end 
+  end
 
-  def self.todays_mood(user) 
-    days = {Monday: "Monday",  Tuesday: "Tuesday", Wednesday: "Wednesday", Thursday: "Thursday", Friday: "Friday", Saturday: "Saturday", Sunday: "Sunday"}
-    day = PROMPT.select("What day would you like to track #{user.username}?".colorize(:blue), days)
-    choices = {Happy: "Happy", Excited: "Excited", Sleepy: "Sleepy", Nonchlant: "Nonchlant", Sad: "Sad", Stressed: "Stressed", Hungry: "Hungry", Overwhelmed: "Overwhelmed", Peaceful: "Peaceful"}
-    mood = PROMPT.select("How are you feeling today #{user.username}?".colorize(:magenta), choices)
+  def self.todays_mood(user)
+    days = { Monday: 'Monday', Tuesday: 'Tuesday', Wednesday: 'Wednesday', Thursday: 'Thursday', Friday: 'Friday', Saturday: 'Saturday', Sunday: 'Sunday' }
+    day = PROMPT.select('What day would you like to track #{user.username}?'.colorize(:blue), days)
+    choices = { Happy: 'Happy', Excited: 'Excited', Sleepy: 'Sleepy', Nonchlant: 'Nonchlant', Sad: 'Sad', Stressed: 'Stressed', Hungry: 'Hungry', Overwhelmed: 'Overwhelmed', Peaceful: 'Peaceful' }
+    mood = PROMPT.select('How are you feeling today #{user.username}?'.colorize(:magenta), choices)
     Track.new(day, mood)
   end
 
-  def to_arr #objects make things much easier 
+  def to_arr # objects make things much easier
     return [@day, @mood]
-  end 
+  end
 
   def to_h
     {
-      day: @day, 
+      day: @day,
       mood: @mood
     }
-  end 
+  end
 
   def self.convert(moods_array, type)
     moods_array.map do |mood|
-      if type == :object 
-        Track.new(mood["day"], mood["mood"]) #creates an array for Track objects 
-      elsif type == :hash 
+      if type == :object
+        Track.new(mood["day"], mood["mood"]) # creates an array for Track objects
+      elsif type == :hash
         mood.to_h
-      end 
-    end 
-  end 
+      end
+    end
+  end
 end
-

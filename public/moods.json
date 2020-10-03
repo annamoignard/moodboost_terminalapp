@@ -18,5 +18,65 @@
   {
     "day": "Thursday",
     "mood": "Hungry"
+  },
+  {
+    "day": "Thursday",
+    "mood": "Nonchlant"
+  },
+  {
+    "day": "Monday",
+    "mood": "Excited"
+  },
+  {
+    "day": "Thursday",
+    "mood": "Overwhelmed"
+  },
+  {
+    "day": "Tuesday",
+    "mood": "Excited"
+  },
+  {
+    "day": "Saturday",
+    "mood": "Excited"
+  },
+  {
+    "day": "Monday",
+    "mood": "Excited"
+  },
+  {
+    "day": "Monday",
+    "mood": "Excited"
+  },
+  {
+    "day": "Thursday",
+    "mood": "Peaceful"
+  },
+  {
+    "day": "Thursday",
+    "mood": "Sad"
+  },
+  {
+    "day": "Monday",
+    "mood": "Happy"
+  },
+  {
+    "day": "Tuesday",
+    "mood": "Sleepy"
+  },
+  {
+    "day": "Tuesday",
+    "mood": "Excited"
+  },
+  {
+    "day": "Tuesday",
+    "mood": "Excited"
+  },
+  {
+    "day": "Tuesday",
+    "mood": "Sleepy"
+  },
+  {
+    "day": "Tuesday",
+    "mood": "Nonchlant"
   }
 ]
