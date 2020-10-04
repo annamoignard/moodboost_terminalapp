@@ -10,6 +10,7 @@ class User
 
   # Getting user's name so we can greet them, and address them by name throughout application. Name is not saved
   # after exiting the application - this would be a good progression in the future to improve app!
+  # Colorized used to create a nicer user experience 
   def self.welcome_user
     username = nil
     loop do
