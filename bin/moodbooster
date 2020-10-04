@@ -11,6 +11,7 @@ require_relative "../lib/menu"
 require_relative "../lib/moods_repo"
 require_relative "../lib/quotes"
 
+
 option = ARGV[0]
 ARGV.clear
 
@@ -27,7 +28,7 @@ end
 def user_help
   puts ""
   puts "-l and --list"
-  puts "Write either 'moodbooster -l' or 'moodbooster --l' in the command line to view your week's moods"
+  puts "Write either 'moodbooster -l' or 'moodbooster --list' in the command line to view your week's moods"
 end
 
 if option == "-h"

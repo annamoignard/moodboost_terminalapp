@@ -1,3 +1,4 @@
+# name spaces to be used throughout
 module MoodTracker
   INPUTS = %i[day mood].freeze
   HEADINGS = %i[Day Mood].freeze

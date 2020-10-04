@@ -7,7 +7,7 @@ class Menu
     @quotes = Quotes.new
     @moods = read_moods
   end
-
+# Main meny selection - user can access all features of the application 
   def menu_selection
     PROMPT.select('Please make a selection!'.colorize(:magenta)) do |menu|
       menu.choice({ name: "Track Today's Mood", value: '1' })
@@ -16,7 +16,7 @@ class Menu
       menu.choice({ name: 'Exit', value: '4' })
     end
   end
-
+# when called, will display tracked moods in a table format 
   def terminal_table
     rows = @moods.map do |mood|
       mood.to_arr

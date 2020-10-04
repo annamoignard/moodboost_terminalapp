@@ -2,6 +2,9 @@ require 'tty-prompt'
 require_relative '../lib/track'
 require_relative '../lib/moods_repo'
 
+# Testing for application, I have tested if my to_arr works to turn my track to array, secondly
+# tested if my convert method turns array of objects to array of hashes
+
 describe 'Track' do
   it '#to_arr turns track into array' do
     track = Track.new('monday', 'happy')
