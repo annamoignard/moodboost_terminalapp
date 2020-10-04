@@ -7,11 +7,13 @@ def read_moods
   Track.convert(mood_data, :object)
 end
 
-# error handling = errors are handled through error free code
+# error handling = errors are handled through error free code - removed as not needed for this application
+# however, may be needed later as I further develop and add to the application 
 # begin
 #   File.read('moods.json')
 # rescue
 #   puts "Can't open this file to view and track moods"
+# exit 
 # end
 
 # Mood data that is written to the .json file after user exit's app

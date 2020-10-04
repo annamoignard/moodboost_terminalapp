@@ -8,6 +8,8 @@ class User
     @username = username
   end
 
+  # Getting user's name so we can greet them, and address them by name throughout application. Name is not saved
+  # after exiting the application - this would be a good progression in the future to improve app!
   def self.welcome_user
     username = nil
     loop do
@@ -17,7 +19,7 @@ class User
       print '> '
       username = gets.chomp
       break unless username.empty?
-      
+      # hanles error is user presses enter and doesnt enter their name. Will display main menu until they do.
       puts 'Houston! We have a problem! You must tell me your name! Try again my friend.'.colorize(:red)
     end
     puts "Thanks #{username}! It's lovely to have you here!".colorize(:cyan)
